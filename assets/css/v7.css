@@ -1,0 +1,84 @@
+/* ===== v7 ===== বড় লেখা, পরিষ্কার রং, নতুন সেবা কার্ড, অ্যানিমেটেড ফুটার ===== */
+:root{--gd:#1a7434;--txt2:#33466b;font-size:17px}
+body{font-size:18px;line-height:1.65}
+nav{font-size:18px}.btn{font-size:17px}
+/* দৃশ্যমানতা: হালকা/ঝাপসা লেখা গাঢ় করা */
+.tag,.eyebrow,.dept,.nm span,.tt,.sh .s{color:var(--gd)}.s{opacity:1;color:var(--txt2)}
+.eyebrow{font-size:17px;font-weight:700;display:inline-flex;align-items:center;gap:8px;background:#e3f4e8;border-radius:99px;padding:3px 14px}
+.tag{font-size:16.5px;background:#fff;border:1px solid #cfe9d6;box-shadow:0 6px 16px rgba(26,116,52,.12)}
+.hx .lead{font-size:clamp(18px,1.55vw,21px);color:#1f3158}
+.hx h1{font-size:clamp(36px,4.5vw,62px)}
+.kp span{font-size:15.5px;opacity:1;color:var(--txt2);font-weight:500}
+.kp b{font-size:clamp(28px,2.8vw,38px)}
+.quick b{font-size:18px}.quick small{font-size:15.5px;opacity:1;color:var(--txt2)}
+.cap b{font-size:clamp(22px,2.2vw,28px)}.cap>span{font-size:16.5px;opacity:1;color:var(--txt2)}
+.chp{font-size:15px}
+.cd figcaption b{font-size:17.5px}.cd figcaption small{font-size:14px;opacity:1;color:var(--txt2)}
+.dots button{background:rgba(18,48,111,.35)}
+.steps h3{font-size:22px}.steps p{font-size:17.5px;color:var(--txt2)}
+.tp b{font-size:16px}.tp small{font-size:14px;opacity:1;color:var(--txt2)}
+.nm h3{font-size:19px}.nm span{font-size:15.5px}
+.bar input,#q{font-size:17px}.tg{font-size:17px}
+.sh h2{position:relative;display:inline-block;padding-bottom:10px}
+.sh h2::after{content:"";position:absolute;left:0;bottom:0;height:5px;width:0;border-radius:5px;background:linear-gradient(90deg,var(--green),#2c6fd1,#7a4bd6);transition:width 1s .3s cubic-bezier(.2,.8,.2,1)}.sh.in h2::after{width:100%}
+.addr p{font-size:18px}
+.addr{position:relative}.pin{font-size:34px;width:64px;height:64px;display:grid;place-items:center;border-radius:50%;background:#fff;box-shadow:0 0 0 0 rgba(214,52,44,.5);animation:pr2 2.2s infinite}@keyframes pr2{to{box-shadow:0 0 0 22px rgba(214,52,44,0)}}
+/* বাটনে আলোর ঝলক */
+.shine{position:relative;overflow:hidden}.shine::before{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shn 3.6s ease-in-out infinite}@keyframes shn{0%,55%{left:-70%}100%{left:130%}}
+.white.shine::before{background:linear-gradient(100deg,transparent,rgba(18,48,111,.18),transparent)}
+/* হিরো: ভাসমান ক্রস, রঙিন হেডলাইন */
+.fx{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.fx i{position:absolute;bottom:-40px;width:var(--s);height:var(--s);opacity:0;animation:rise2 var(--d) linear var(--o) infinite;background:linear-gradient(var(--green),var(--green)) center/34% 100% no-repeat,linear-gradient(var(--green),var(--green)) center/100% 34% no-repeat;border-radius:3px}
+@keyframes rise2{0%{opacity:0;transform:translateY(0) rotate(0)}15%{opacity:.28}85%{opacity:.22}100%{opacity:0;transform:translateY(-760px) rotate(200deg)}}
+.hx h1 span{background:linear-gradient(100deg,#12306f 10%,#1f4fb8 55%,#1a7434 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;padding-bottom:.08em}
+.hx-show .orb{background:radial-gradient(circle at 35% 30%,#fff,rgba(188,220,247,.75) 60%,transparent 72%)}
+.cd{background:linear-gradient(160deg,#fff,#eaf3fc)}.cd .em{position:absolute;left:50%;top:30%;translate:-50% -50%;font-size:64px;opacity:.5}
+.cd img{position:relative}.cd.main{box-shadow:0 34px 70px rgba(18,48,111,.4)}.cd.main figcaption b{font-size:19px}
+.kp>div:nth-child(1) b{color:#12306f}.kp>div:nth-child(2) b{color:#1f6fd0}.kp>div:nth-child(3) b{color:#1a7434}.kp>div:nth-child(4) b{color:#7a4bd6}
+.kp>div{border-top:4px solid transparent}.kp>div:nth-child(1){border-top-color:#12306f}.kp>div:nth-child(2){border-top-color:#2c6fd1}.kp>div:nth-child(3){border-top-color:#2b9a4a}.kp>div:nth-child(4){border-top-color:#7a4bd6}
+.quick i{animation:wig 5s ease-in-out infinite}.quick a:nth-child(2) i{animation-delay:-1.2s}.quick a:nth-child(3) i{animation-delay:-2.4s}.quick a:nth-child(4) i{animation-delay:-3.6s}@keyframes wig{0%,86%,100%{rotate:0}90%{rotate:-12deg}94%{rotate:10deg}98%{rotate:-5deg}}
+/* ===== সেবার কার্ড (পরিষ্কার, সমান গ্রিড) ===== */
+.svc2{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.sc{--c:#2c6fd1;position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:26px;overflow:visible;box-shadow:0 12px 30px rgba(18,48,111,.08);opacity:0;translate:0 44px;scale:.94;transition:opacity .7s,translate .7s cubic-bezier(.2,.8,.2,1),scale .7s,transform .4s,box-shadow .4s,border-color .4s}
+.sc.in{opacity:1;translate:0 0;scale:1}
+.sc::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;border-radius:26px 26px 0 0;background:var(--c);z-index:3}
+.sc:hover{transform:translateY(-10px);border-color:var(--c);box-shadow:0 30px 56px color-mix(in srgb,var(--c) 32%,transparent)}
+.sc .im{position:relative;aspect-ratio:16/10;border-radius:26px 26px 0 0;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 22%,#fff),color-mix(in srgb,var(--c) 6%,#fff))}
+.sc .em{position:absolute;left:50%;top:50%;translate:-50% -50%;font-size:70px;opacity:.55}
+.sc .cl{position:absolute;inset:0;overflow:hidden;border-radius:26px 26px 0 0}.sc .cl img{width:100%;height:100%;object-fit:cover;display:block;transition:scale .9s cubic-bezier(.2,.8,.2,1)}.sc:hover .cl img{scale:1.12}
+.sc .cl::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 60%,color-mix(in srgb,var(--c) 28%,transparent))}
+.ic2{position:absolute;right:20px;bottom:-28px;z-index:4;width:58px;height:58px;display:grid;place-items:center;font-size:29px;border-radius:18px;background:var(--c);border:4px solid #fff;box-shadow:0 12px 24px color-mix(in srgb,var(--c) 45%,transparent);animation:fl 4s ease-in-out infinite;transition:rotate .5s}
+.sc:hover .ic2{rotate:-12deg;scale:1.1}.sc:nth-child(2n) .ic2{animation-delay:-1.3s}.sc:nth-child(3n) .ic2{animation-delay:-2.6s}
+.rib{position:absolute;left:16px;top:18px;z-index:4;background:var(--c);color:#fff;font-weight:700;font-size:14.5px;padding:3px 14px;border-radius:99px;box-shadow:0 8px 16px color-mix(in srgb,var(--c) 40%,transparent);animation:blink2 1.8s infinite}@keyframes blink2{50%{scale:1.08;filter:brightness(1.15)}}
+.sc .tx{padding:38px 22px 26px}.sc h3{font-size:22px;color:var(--navy);margin-bottom:6px}.sc p{margin:0;font-size:17px;color:var(--txt2);line-height:1.5}
+.sc .bar{position:absolute;left:22px;right:22px;bottom:0;height:5px;border-radius:5px 5px 0 0;background:var(--c);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1)}.sc:hover .bar{transform:scaleX(1)}
+/* ধাপ */
+.steps{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}.steps li{padding:28px 26px}
+/* ===== ফুটার ===== */
+.ft{position:relative;overflow:hidden;color:#fff;padding:clamp(48px,6vw,80px) clamp(16px,4vw,48px) 0;background:linear-gradient(125deg,#0a1f4d,#12306f 28%,#0f6a8f 56%,#17805a 80%,#0a1f4d);background-size:320% 320%;animation:ftbg 22s ease-in-out infinite alternate}@keyframes ftbg{to{background-position:100% 50%}}
+.ft::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,#2b9a4a,#2c6fd1,#7a4bd6,#e0568f,#f08c00,#2b9a4a);background-size:300% 100%;animation:ftbg 6s linear infinite alternate}
+.ft-glow i{position:absolute;border-radius:50%;filter:blur(60px);opacity:.38;animation:mv 15s ease-in-out infinite alternate}.ft-glow i:nth-child(1){width:300px;height:300px;background:#2c6fd1;left:-70px;top:10%}.ft-glow i:nth-child(2){width:260px;height:260px;background:#2b9a4a;right:8%;top:-60px;animation-delay:-4s}.ft-glow i:nth-child(3){width:240px;height:240px;background:#7a4bd6;right:-60px;bottom:10%;animation-delay:-8s}.ft-glow i:nth-child(4){width:18px;height:18px;filter:blur(1px);opacity:.5;background:#7be09a;left:30%;bottom:20%;animation:fl 5s ease-in-out infinite}.ft-glow i:nth-child(5){width:12px;height:12px;filter:blur(1px);opacity:.5;background:#fff;left:62%;top:28%;animation:fl 6s ease-in-out infinite -2s}.ft-glow i:nth-child(6){width:22px;height:22px;filter:blur(1px);opacity:.4;background:#ffa3c4;left:80%;bottom:30%;animation:fl 7s ease-in-out infinite -3s}
+.ft-ecg{position:absolute;left:0;bottom:46px;width:100%;height:80px;fill:none;stroke:#7be09a;stroke-width:3;opacity:.4}.ft-ecg path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:beat 6s ease-in-out infinite}
+.ft-in{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(24px,4vw,56px);max-width:1380px;margin:0 auto}
+.ft-brand p{font-size:18px;margin:14px 0;opacity:.95;max-width:22em}.plate{box-shadow:0 12px 26px rgba(0,0,0,.25)}
+.em24{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:6px 16px;font-weight:600;margin:0 0 16px;backdrop-filter:blur(6px)}.em24 .live-dot{background:#ff6b5f}.ft-brand .btn{display:table}
+.ft-col h4{font-size:21px;margin-bottom:14px;position:relative;padding-bottom:10px}.ft-col h4::after{content:"";position:absolute;left:0;bottom:0;width:46px;height:4px;border-radius:4px;background:linear-gradient(90deg,#7be09a,#7db8f2);animation:wd 3s ease-in-out infinite alternate}@keyframes wd{to{width:96px}}
+.fl{--k:#2b9a4a;display:flex;align-items:center;gap:12px;margin:9px 0;padding:8px 14px 8px 8px;border-radius:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);font-size:17.5px;opacity:1;transition:transform .3s,background .3s,box-shadow .3s}
+.fl i{font-style:normal;width:40px;height:40px;flex:none;display:grid;place-items:center;border-radius:12px;background:var(--k);box-shadow:0 6px 14px rgba(0,0,0,.25);transition:rotate .4s,scale .4s}
+.fl:hover{transform:translateX(8px);background:rgba(255,255,255,.2);box-shadow:0 12px 24px rgba(0,0,0,.2);color:#fff}.fl:hover i{rotate:-12deg;scale:1.12}
+.c-g{--k:#2b9a4a}.c-r{--k:#d6342c}.c-b{--k:#2c6fd1}.c-p{--k:#7a4bd6}.c-o{--k:#e8890c}
+.ft-bar{position:relative;z-index:2;max-width:1380px;margin:34px auto 0;padding:18px 0 22px;border-top:1px solid rgba(255,255,255,.22);display:flex;justify-content:space-between;align-items:center;gap:14px}.ft-bar small{font-size:15.5px;opacity:.9;margin:0}
+.totop{width:46px;height:46px;display:grid;place-items:center;border-radius:50%;background:#fff;color:var(--navy);font-size:22px;font-weight:800;box-shadow:0 10px 22px rgba(0,0,0,.25);animation:bob 2s ease-in-out infinite}.totop:hover{background:#7be09a}@keyframes bob{50%{translate:0 -6px}}
+/* ===== অন্যান্য রিভিল ভ্যারিয়েন্ট ===== */
+.mapw.rv{translate:0 50px;scale:.97}.mapw.rv.in{scale:1}.bar.rv{translate:-30px 0}.bar.rv.in{translate:0 0}
+/* ===== অ্যানিমেশন বন্ধ (অ্যাডমিন সেটিং / reduced-motion) ===== */
+html.calm *,html.calm *::before,html.calm *::after{animation:none!important}
+html.calm .hx h1 span{opacity:1!important;translate:none!important;filter:none!important}
+html.calm .kp,html.calm .quick a,html.calm .hx-show{opacity:1!important;translate:none!important}
+@media(prefers-reduced-motion:reduce){.fx{display:none}.sc{opacity:1!important;translate:none!important;scale:1!important}}
+/* ===== রেসপন্সিভ ===== */
+@media(max-width:1200px){.svc2{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.ft-in{grid-template-columns:1fr 1fr}.ft-brand{grid-column:1/-1}body{font-size:18px}}
+@media(max-width:800px){.svc2{grid-template-columns:repeat(2,1fr);gap:18px}.sc .tx{padding:36px 16px 22px}.sc h3{font-size:19px}.sc p{font-size:15.5px}.ic2{width:50px;height:50px;font-size:25px;right:14px}}
+@media(max-width:520px){.ft-in{grid-template-columns:1fr}.svc2{grid-template-columns:1fr}.ft-bar{flex-direction:row}.hx h1{font-size:clamp(32px,9.4vw,44px)}}
+.sh{display:flex;flex-direction:column;align-items:flex-start;gap:8px}.sh h2,.sh p{margin:0}.sh .s{margin-top:2px}

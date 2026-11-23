@@ -1,0 +1,47 @@
+/* ===== v8 : পরিষ্কার ডায়ালগ, ক্লিপড হিরো, সেবা ক্যারোসেল, ফার্মাসিস্ট লগইন ===== */
+/* হিরো: ক্যারোসেল লেখার ওপর উঠবে না */
+.hx-copy{position:relative;z-index:4}.hx-show{z-index:1;clip-path:inset(-70px 0 -70px 0)}
+.hx .lead{max-width:30em}
+/* সেবা ক্যারোসেল */
+.svwrap{position:relative;max-width:1380px;margin:0 auto}
+.svs{--cw:290px;--ch:380px;position:relative;perspective:1500px;perspective-origin:50% 38%;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:pan-y;clip-path:inset(-70px 0 -70px 0)}.svs.grab{cursor:grabbing}
+.svs .ring3d{top:30px}
+.ring3d .sc{position:absolute;inset:0;height:100%;opacity:1;translate:none;scale:1;transition:box-shadow .4s;backface-visibility:hidden;-webkit-backface-visibility:hidden;will-change:opacity;box-shadow:0 24px 50px rgba(18,48,111,.2)}
+.ring3d .sc:hover{transform:none}
+.ring3d .sc .im{flex:1;aspect-ratio:auto;min-height:0}
+.ring3d .sc .tx{padding:36px 18px 22px;flex:none}
+.ring3d .sc.act{border-color:var(--c);box-shadow:0 34px 64px color-mix(in srgb,var(--c) 40%,transparent)}.ring3d .sc.act .bar{transform:scaleX(1)}
+.ring3d .sc.act .ic2{animation:fl 3s ease-in-out infinite}
+.arw{position:absolute;top:44%;z-index:8;width:54px;height:54px;border-radius:50%;border:0;background:#fff;color:var(--navy);font:700 34px/1 'Anek Bangla';box-shadow:0 12px 26px rgba(18,48,111,.28);cursor:pointer;display:grid;place-items:center;padding:0 0 5px;transition:transform .25s,background .25s,color .25s}
+.arw:hover{background:var(--navy);color:#fff;transform:scale(1.1)}.arw.l{left:6px}.arw.r{right:6px}
+.dots.sv{margin:6px 0 0}
+.sh+.svwrap{margin-top:8px}
+/* হেডারে ফার্মাসিস্ট বাটন */
+.acts{display:flex;align-items:center;gap:10px}
+.ag{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--navy);background:#fff;color:var(--navy);border-radius:99px;padding:8px 16px;font:700 16.5px 'Hind Siliguri',sans-serif;cursor:pointer;transition:background .25s,color .25s,transform .25s;white-space:nowrap}
+.ag:hover,.ag.in{background:var(--navy);color:#fff}.ag:hover{transform:translateY(-2px)}
+.notes{font-size:16.5px;max-height:70vh;overflow:auto}.notes p{margin:0 0 10px}.stt{display:inline-block;border-radius:99px;padding:1px 10px;font-size:14px;font-weight:700;background:#fff1c9;color:#8a5a00}.stt.Confirmed{background:#dff3e5;color:#1a7434}.stt.Cancelled{background:#fde1df;color:#a3231b}.stt.Done{background:#dce8ff;color:#12306f}
+/* ===== ডায়ালগ: বড়, গাঢ়, স্পষ্ট লেখা ===== */
+dialog{font-size:18px;line-height:1.55;color:#0c1a3a;width:min(620px,95vw);max-height:92vh;max-height:92dvh;overflow:auto;padding:26px 26px 28px}
+dialog *{font-family:'Hind Siliguri','Anek Bangla',system-ui,sans-serif}dialog h3,dialog h4{font-family:'Anek Bangla','Hind Siliguri',sans-serif}
+dialog h3{font-size:25px;color:#12306f;margin-bottom:4px}dialog h4{font-size:20px;color:#12306f;margin:20px 0 6px}
+dialog .dept{font-size:17.5px;color:#1a7434;font-weight:700}dialog .sl{font-size:17px;color:#1f3158;margin:4px 0}
+.dh{gap:16px}.dh .ph{width:92px;height:92px}
+dialog label.f{display:block;font-size:17px;font-weight:600;color:#12306f;margin-top:14px}
+dialog input.t{display:block;width:100%;font-size:19px;color:#0c1a3a;background:#fff;padding:13px 14px;border:2px solid #9fb3d1;border-radius:12px;margin-top:6px;min-height:50px;box-shadow:inset 0 1px 2px rgba(18,48,111,.08)}
+dialog input.t::placeholder{color:#6b7c9c;opacity:1}dialog input.t:focus{border-color:#12306f;outline:4px solid rgba(44,111,209,.25)}
+dialog .btn{font-size:18px}.wide{width:100%;margin-top:18px;justify-content:center;text-align:center;display:block;padding:14px 18px}
+.x{right:14px;top:12px;z-index:2}.x button{width:44px;height:44px;border-radius:50%;background:#eef4fa;font-size:22px;color:#12306f}
+.days{gap:10px;margin:10px 0}.days span{font-size:17.5px;font-weight:600;color:#12306f;border:2px solid #9fb3d1;border-radius:14px;padding:9px 16px;background:#fff;min-width:78px}.days input:checked+span{background:#12306f;color:#fff;border-color:#12306f}
+.agi{background:#e8f6ec;border:2px solid #bfe3c9;border-radius:16px;padding:12px 16px;margin-top:14px;display:grid;gap:2px;font-size:17px;color:#0f3d1f}.agi b{font-size:18px}.agi small{color:#2f5a3a;font-size:15px}
+.auth{margin-top:8px}.atabs{display:flex;gap:8px;background:#eef4fa;border-radius:14px;padding:5px;margin-bottom:10px}.atabs button{flex:1;border:0;background:none;border-radius:10px;padding:11px 8px;font:700 18px 'Hind Siliguri',sans-serif;color:#33466b;cursor:pointer;transition:background .25s,color .25s}.atabs button.on{background:#12306f;color:#fff;box-shadow:0 6px 14px rgba(18,48,111,.3)}
+.anote{font-size:16.5px;color:#33466b;margin:6px 0 4px}.anote.err{color:#a3231b;font-weight:700}.anote.ok{color:#1a7434;font-weight:700}
+.acc p{margin:4px 0;font-size:18px}.mb{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.mb b{flex:1 1 100%}.mb span{font-size:16px;color:#33466b}
+.ok h3{font-size:26px}.ok p{font-size:18px}
+/* ===== রেসপন্সিভ ===== */
+@media(max-width:900px){.ag .lb{font-size:15.5px}.top{gap:8px}}
+@media(max-width:640px){.ag{padding:9px 11px}.ag .lb{display:none}.ag::after{content:none}.acts{gap:6px}.arw{width:44px;height:44px;font-size:28px;top:40%}.arw.l{left:0}.arw.r{right:0}
+ dialog{padding:20px 16px 24px;border-radius:20px}.fg{grid-template-columns:1fr}.dh .ph{width:72px;height:72px}dialog h3{font-size:22px}.days span{min-width:66px;padding:8px 12px}}
+@media(max-width:640px){.acts .call{padding:9px 12px;font-size:15px}}
+html,body{overflow-x:clip}.svs,.hx-show{overflow-x:clip}
+.dh>div:last-child{padding-right:46px}dialog>h3{padding-right:46px}
